@@ -1,0 +1,80 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  margin: 10px;
+  color: white;
+  font-size: 40px;
+}
+.container {
+  background-color: sienna;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header ul li {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+header ul li::after {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  width: 2px;
+  background-color: black;
+  margin-left: 10px;
+}
+header ul li:last-child::after {
+  display: none;
+}
+
+.users-info {
+  width: 400px;
+  padding: 50px;
+  background-color: rgb(111, 123, 123);
+}
+.users {
+  display: flex;
+}
+.user {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  margin-right: 10px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-info {
+  /* width: 700px;
+  height: 200px; */
+  background-color: brown;
+  display: none;
+  transition: display 2s ease-in-out;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.user:hover .user-info {
+  display: flex;
+}
